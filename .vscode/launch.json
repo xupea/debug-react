@@ -9,21 +9,21 @@
             "request": "launch",
             "name": "Debug with Vite",
             "url": "http://localhost:5173",
-            "webRoot": "${workspaceFolder}"
+            "webRoot": "${workspaceFolder}/debug-with-vite/"
         },
         {
             "type": "chrome",
             "request": "launch",
             "name": "Debug with Cra",
             "url": "http://localhost:3000",
-            "webRoot": "${workspaceFolder}"
+            "webRoot": "${workspaceFolder}/debug-with-cra/"
         },
         {
             "type": "chrome",
             "request": "launch",
             "name": "Debug with Cra Eject",
             "url": "http://localhost:3001",
-            "webRoot": "${workspaceFolder}"
+            "webRoot": "${workspaceFolder}/debug-with-cra-eject/"
         }
     ]
 }
