@@ -10,6 +10,20 @@
             "name": "Debug with Vite",
             "url": "http://localhost:5173",
             "webRoot": "${workspaceFolder}"
+        },
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Debug with Cra",
+            "url": "http://localhost:3000",
+            "webRoot": "${workspaceFolder}"
+        },
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Debug with Cra Eject",
+            "url": "http://localhost:3001",
+            "webRoot": "${workspaceFolder}"
         }
     ]
 }
