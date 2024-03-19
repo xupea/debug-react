@@ -1,4 +1,4 @@
 {
-    "typescript.validate.enable": false,
-    "javascript.validate.enable": false
+    "javascript.validate.enable": false,
+    "flow.pathToFlow": "${workspaceRoot}/react-18.2.0/node_modules/.bin/flow"
 }
