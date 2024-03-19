@@ -1,23 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect, useState } from "react";
+import "./App.css";
+import TodoList from "./TodoList";
+
+const db = [];
 
 function App() {
+  const [data, setData] = useState(db);
+
+  const handleAdd = (text) => {
+    db.push(text);
+
+    setData([...db]);
+
+    console.log(text);
+  };
+
+  const handleDelete = (idx) => {
+    db.splice(idx, 1);
+
+    setData([...db]);
+
+    console.log(idx);
+  };
+
+  useEffect(() => {
+    console.log("Parent useEffect");
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <TodoList
+        todos={data}
+        onAdd={(text) => handleAdd(text)}
+        onDelete={(idx) => handleDelete(idx)}
+      />
     </div>
   );
 }
